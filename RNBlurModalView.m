@@ -202,8 +202,12 @@ typedef void (^RNBlurCompletion)(void);
         _dismissButton.center = CGPointMake(view.left, view.top);
         [self addSubview:_dismissButton];
         
-        UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTapBackground)];
-        [self addGestureRecognizer:recognizer];
+        //UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTapBackground)];
+        //[self addGestureRecognizer:recognizer];
+        
+        UIButton *buttonTap = [[UIButton alloc] initWithFrame:parentView.frame];
+        buttonTap.backgroundColor = [UIColor orangeColor];
+        [parentView addSubview:buttonTap];
     }
     return self;
 }
