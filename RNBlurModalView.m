@@ -203,7 +203,7 @@ typedef void (^RNBlurCompletion)(void);
         [self addSubview:_dismissButton];
         
         UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTapBackground)];
-        [parentView addGestureRecognizer:recognizer];
+        [self addGestureRecognizer:recognizer];
     }
     return self;
 }
