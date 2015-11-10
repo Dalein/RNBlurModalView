@@ -205,7 +205,7 @@ typedef void (^RNBlurCompletion)(void);
         UIButton *buttonTap = [[UIButton alloc] initWithFrame:parentView.frame];
         buttonTap.backgroundColor = [UIColor clearColor];
         [buttonTap addTarget:self action:@selector(actionTapBackground) forControlEvents:UIControlEventTouchUpInside];
-        [parentView addSubview:buttonTap];
+        [self insertSubview:buttonTap belowSubview:_contentView];
     }
     return self;
 }
