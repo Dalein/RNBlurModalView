@@ -201,8 +201,15 @@ typedef void (^RNBlurCompletion)(void);
         
         _dismissButton.center = CGPointMake(view.left, view.top);
         [self addSubview:_dismissButton];
+        
+        UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionTapBackground)];
+        [parentView addGestureRecognizer:recognizer];
     }
     return self;
+}
+
+- (void)actionTapBackground {
+    NSLog(@"sd");
 }
 
 - (id)initWithParentView:(UIView*)parentView title:(NSString*)title message:(NSString*)message {
@@ -704,11 +711,6 @@ typedef void (^RNBlurCompletion)(void);
     CGImageRelease(imageRef);
     
     return returnImage;
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [[event allTouches] anyObject];
-    NSLog(@"%@", touch.view);
 }
 
 @end
