@@ -339,7 +339,7 @@ typedef void (^RNBlurCompletion)(void);
         }
         
         CALayer *layer = [CALayer layer];
-        layer.bounds = CGRectMake(0, 0, [[UIScreen mainScreen] applicationFrame].size.width*2, ([[UIScreen mainScreen] applicationFrame].size.width+20)*2);
+        layer.bounds = CGRectMake(0, 0, [[UIScreen mainScreen] applicationFrame].size.width*2, ([[UIScreen mainScreen] applicationFrame].size.height+20)*2);
         layer.backgroundColor = [UIColor blackColor].CGColor;
         layer.opacity = 0.5f;
         [_blurView.layer addSublayer:layer];
