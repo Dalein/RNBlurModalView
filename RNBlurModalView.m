@@ -338,6 +338,12 @@ typedef void (^RNBlurCompletion)(void);
             [_parentView insertSubview:_blurView belowSubview:self];
         }
         
+        CALayer *layer = [CALayer layer];
+        layer.bounds = CGRectMake(0, 0, [[UIScreen mainScreen] applicationFrame].size.width*2, ([[UIScreen mainScreen] applicationFrame].size.width+20)*2);
+        layer.backgroundColor = [UIColor blackColor].CGColor;
+        layer.opacity = 0.5f;
+        [_blurView.layer addSublayer:layer];
+        
         self.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.4, 0.4);
         [UIView animateWithDuration:self.animationDuration animations:^{
             _blurView.alpha = 1.f;
