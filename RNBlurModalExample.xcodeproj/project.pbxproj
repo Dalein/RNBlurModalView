@@ -165,6 +165,11 @@
 				CLASSPREFIX = RN;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Ryan Nystrom";
+				TargetAttributes = {
+					866E0B3A162F2F2D00DE51B9 = {
+						DevelopmentTeam = QX52J3N4KM;
+					};
+				};
 			};
 			buildConfigurationList = 866E0B35162F2F2D00DE51B9 /* Build configuration list for PBXProject "RNBlurModalExample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -297,10 +302,12 @@
 		866E0B60162F2F2D00DE51B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = QX52J3N4KM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RNBlurModalExample/RNBlurModalExample-Prefix.pch";
 				INFOPLIST_FILE = "RNBlurModalExample/RNBlurModalExample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PRODUCT_BUNDLE_IDENTIFIER = sitesoft.RNBlurModalExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -310,10 +317,12 @@
 		866E0B61162F2F2D00DE51B9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = QX52J3N4KM;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RNBlurModalExample/RNBlurModalExample-Prefix.pch";
 				INFOPLIST_FILE = "RNBlurModalExample/RNBlurModalExample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				PRODUCT_BUNDLE_IDENTIFIER = sitesoft.RNBlurModalExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
