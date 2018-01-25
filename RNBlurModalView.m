@@ -148,9 +148,6 @@ typedef void (^RNBlurCompletion)(void);
         
         self.alpha = 0.f;
         self.backgroundColor = [UIColor clearColor];
-//        self.backgroundColor = [UIColor redColor];
-//        self.layer.borderWidth = 2.f;
-//        self.layer.borderColor = [UIColor blackColor].CGColor;
         
         self.autoresizingMask = (UIViewAutoresizingFlexibleWidth |
                                   UIViewAutoresizingFlexibleHeight |
@@ -247,33 +244,6 @@ typedef void (^RNBlurCompletion)(void);
         self.center = CGPointMake(CGRectGetMidX(newSuperview.frame), CGRectGetMidY(newSuperview.frame));
     }
 }
-
-- (void)updateSubviews {
-    self.hidden = YES;
-    
-    // get new screenshot after orientation
-    [_blurView removeFromSuperview]; _blurView = nil;
-    if (_controller) {
-        _blurView = [[RNBlurView alloc] initWithCoverView:_controller.view];
-        _blurView.alpha = 1.f;
-        [_controller.view insertSubview:_blurView belowSubview:self];
-
-    }
-    else if(_parentView) {
-        _blurView = [[RNBlurView alloc] initWithCoverView:_parentView];
-        _blurView.alpha = 1.f;
-        [_parentView insertSubview:_blurView belowSubview:self];
-
-    }
-    
-    
-    
-    self.hidden = NO;
-
-    _contentView.center = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
-    _dismissButton.center = _contentView.origin;
-}
-
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
