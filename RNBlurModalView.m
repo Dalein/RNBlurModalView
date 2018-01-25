@@ -156,8 +156,6 @@ typedef void (^RNBlurCompletion)(void);
                                   UIViewAutoresizingFlexibleHeight |
                                   UIViewAutoresizingFlexibleLeftMargin |
                                   UIViewAutoresizingFlexibleTopMargin);
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationDidChangeNotification:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
     }
     return self;
 }
@@ -249,14 +247,6 @@ typedef void (^RNBlurCompletion)(void);
         self.center = CGPointMake(CGRectGetMidX(newSuperview.frame), CGRectGetMidY(newSuperview.frame));
     }
 }
-
-
-- (void)orientationDidChangeNotification:(NSNotification*)notification {
-	if ([self isVisible]) {
-		[self performSelector:@selector(updateSubviews) withObject:nil afterDelay:0.3f];
-	}
-}
-
 
 - (void)updateSubviews {
     self.hidden = YES;
