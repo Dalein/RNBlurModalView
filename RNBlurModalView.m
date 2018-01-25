@@ -453,10 +453,6 @@ typedef void (^RNBlurCompletion)(void);
     self.frame = frame;
 }
 
-- (CGPoint)origin {
-    return self.frame.origin;
-}
-
 - (void)setOrigin:(CGPoint)origin {
     CGRect frame = self.frame;
     frame.origin = origin;
